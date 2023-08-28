@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: spring_docker_test_s1
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://43.200.56.90:53573/docker
+    username: mysqldocker
+    password: mysqladmin
+server:
+  port: 8081
