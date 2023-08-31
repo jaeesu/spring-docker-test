@@ -35,3 +35,5 @@ out/
 
 ### VS Code ###
 .vscode/
+docker/spring-docker-service/s1/src
+docker/spring-docker-service//s2/src
