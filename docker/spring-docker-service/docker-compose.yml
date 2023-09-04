@@ -52,6 +52,34 @@ services:
       - docker-service-s2
       - docker-service-bridge
 
+  s1-prom:
+    image: prom/prometheus:latest
+    container_name: s1-prom
+    restart: always
+    ports:
+      - "9090:9090"
+    depends_on:
+      - s1
+    volumes:
+      - ./s1/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      - docker-service-s1
+      - docker-service-bridge
+
+  s2-prom:
+    image: prom/prometheus:latest
+    container_name: s2-prom
+    restart: always
+    ports:
+      - "9091:9090"
+    depends_on:
+      - s2
+    volumes:
+      - ./s2/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      - docker-service-s2
+      - docker-service-bridge
+
 networks:
   docker-service-s1:
     ipam:
