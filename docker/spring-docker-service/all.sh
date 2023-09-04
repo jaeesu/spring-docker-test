@@ -1,5 +1,8 @@
 #!/bin/bash
 
+dirPath=`dirname $0`
+cd ${dirPath}
+
 echo "====== S1 Shell Script ======"
 sh ./s1/make.sh
 
