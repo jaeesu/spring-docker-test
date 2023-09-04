@@ -1,5 +1,0 @@
-rootProject.name = 'spring-docker-test'
-
-include 'spring-docker-test-s1'
-include 'spring-docker-test-s2'
-include 'spring-docker-test-s3'
