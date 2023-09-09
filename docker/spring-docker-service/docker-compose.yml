@@ -10,7 +10,6 @@ services:
     restart: always
     networks:
       - docker-service-s1
-      - docker-service-bridge
 
   s2:
     image: s2
@@ -20,7 +19,6 @@ services:
     restart: always
     networks:
       - docker-service-s2
-      - docker-service-bridge
 
   s1-nginx:
     image: nginx:latest
@@ -64,7 +62,6 @@ services:
       - ./s1/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
     networks:
       - docker-service-s1
-      - docker-service-bridge
 
   s2-prom:
     image: prom/prometheus:latest
@@ -78,7 +75,6 @@ services:
       - ./s2/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
     networks:
       - docker-service-s2
-      - docker-service-bridge
 
 networks:
   docker-service-s1:
